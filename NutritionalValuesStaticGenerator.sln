@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionalValuesStaticGenerator", "NutritionalValuesStaticGenerator\NutritionalValuesStaticGenerator.csproj", "{E4FC6264-CBD2-48A7-8E77-F08135025304}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{30BE7BD7-583C-4EF7-9C44-D69840BB9044}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{E4FC6264-CBD2-48A7-8E77-F08135025304}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4FC6264-CBD2-48A7-8E77-F08135025304}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4FC6264-CBD2-48A7-8E77-F08135025304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BE7BD7-583C-4EF7-9C44-D69840BB9044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BE7BD7-583C-4EF7-9C44-D69840BB9044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BE7BD7-583C-4EF7-9C44-D69840BB9044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BE7BD7-583C-4EF7-9C44-D69840BB9044}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
