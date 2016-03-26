@@ -22,6 +22,13 @@ namespace Web.Controllers
             return result;
         }
 
+        public string About()
+        {
+            var view = GetView("About.cshtml");
+            var result = Razor.Parse(view);
+            return result;
+        }
+
         private string GetView(string viewName)
         {
             string path = Path.Combine(Environment.CurrentDirectory, @"Views\", viewName);

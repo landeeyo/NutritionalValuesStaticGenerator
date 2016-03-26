@@ -69,8 +69,15 @@ namespace NutritionalValuesStaticGenerator
             WriteToFile(index, "Index.html");
 
             #endregion
-            #region Render  detail items
 
+            #region Render about
+
+            string about = c.About();
+            WriteToFile(about, "About.html");
+
+            #endregion
+
+            #region Render  detail items
            
             //i = 0;
             foreach (var item in dp.Items)
@@ -91,7 +98,7 @@ namespace NutritionalValuesStaticGenerator
                 WriteToFile(details, string.Format("details_{0}.html", item.Name));
             }
 
-            #endregion
+            #endregion           
         }
 
         private static string NormalizeFilename(string fileName)
