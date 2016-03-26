@@ -18,11 +18,11 @@ namespace NutritionalValuesStaticGenerator.Logic
             {
                 var line = streamReader.ReadLine();
                 var firstSplit = line.Split('"');
-                var secondSplit = firstSplit[firstSplit.Length-1].Split(';');
+                var secondSplit = firstSplit[firstSplit.Length - 1].Split(';');
                 var item = new NutritionalDataItem
                 {
                     //Name = csv[0],//.Remove('\\'),
-                    Name = firstSplit[1],
+                    Name = firstSplit[1][0] + firstSplit[1].ToLower().Substring(1),
                     Calories = Convert.ToDouble(secondSplit[1].Replace('.', ',')),
 
                 };

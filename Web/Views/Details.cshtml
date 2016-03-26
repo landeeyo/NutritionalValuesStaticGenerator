@@ -7,8 +7,6 @@
     <title>www.nuritionalvalues.cf - nutritional data, nutritional values, calories, carbohydrates, fat</title>
     <meta charset="UTF-8">
     <meta content="nutritional data, nutritional values, calories, carbohydrates, fat" name="Description">
-    <meta content="nutritional data, nutritional values, calories, carbohydrates, fat">
-    <meta name="date" content="2006-07-17">
     <meta http-equiv="pragma" content="no-cache">
     <meta name="distribution" content="global">
     <meta name="classification" content="nutrition">
@@ -16,19 +14,18 @@
     <meta name="page-topic" content="www.nuritionalvalues.cf - nutritional data, nutritional values, calories, carbohydrates, fat">
     <meta name="Date" content="2016/03/26">
     <meta name="Robots" content="index,follow">
-    <meta name="revisit-after" content="20 Days">
+    <meta name="revisit-after" content="1 Days">
     <meta name="google-site-verification" content="7NfzK_5w2PAx45zyxjOVIMf0D7TnnTvHDLQoo4fDfoI" />
 
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="basic-js-cookie-banner.min.css">
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
+    <script src="basic-js-cookie-banner.js"></script>
 </head>
 
-<body ng-controller="mainCtrl">
-    <div class="alert alert-warning alert-dismissible cookie-banner" role="alert">
-        <div style="display: none;" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></div>
-        We use cookies to improve your experience. Please read our <a href="http://www.google.com/intl/en/policies/privacy/partners/">cookie policy</a>        for more information about how we use cookies.
-    </div>
+<body>
+
     <div class="container">
         <div class="col-md-12">
             <header>
@@ -69,16 +66,52 @@
                                 <dd>100 g</dd>
                                 <dt>Kcal:</dt>
                                 <dd>@Model.Calories</dd>
-                                @*<dt>{{ "carbohydrate" | translate | capitalize }}:</dt>
-                <dd>{{ item.carbohydrate | grams}}</dd>
-                <dt>{{ "protein" | translate | capitalize }}:</dt>
-                <dd>{{ item.protein | grams }}</dd>
-                <dt>{{ "fiber" | translate | capitalize }}:</dt>
-                <dd>{{ item.fiber | grams }}</dd>
-                <dt>{{ "sugar" | translate | capitalize }}:</dt>
-                <dd>{{ item.sugar | grams }}</dd>
-                <dt>{{ "fat" | translate | capitalize }}:</dt>
-                <dd>{{ item.fat | grams }}</dd>*@
+                                <dt>Carbohydrate:</dt>
+                                @if (Model.Carbohydrate.HasValue)
+                                {
+                                    <dd>@Model.Carbohydrate.Value g</dd>
+                                }
+                                else
+                                {
+                                    <dd>-</dd>
+                                }
+                                <dt>Protein:</dt>
+                                @if (Model.Protein.HasValue)
+                                {
+                                    <dd>@Model.Protein.Value g</dd>
+                                }
+                                else
+                                {
+                                    <dd>-</dd>
+                                }
+                                <dt>Fiber:</dt>
+                                @if (Model.Fiber.HasValue)
+                                {
+                                    <dd>@Model.Fiber.Value g</dd>
+                                }
+                                else
+                                {
+                                    <dd>-</dd>
+                                }
+                                <dt>Sugar:</dt>
+                                @if (Model.Sugar.HasValue)
+                                {
+                                    <dd>@Model.Sugar.Value g</dd>
+                                }
+                                else
+                                {
+                                    <dd>-</dd>
+                                }
+                                <dt>Fat:</dt>
+                                @if (Model.Fat.HasValue)
+                                {
+                                    <dd>@Model.Fat.Value g</dd>
+                                }
+                                else
+                                {
+                                    <dd>-</dd>
+                                }
+
                             </dl>
                         </div>
                     </div>
@@ -94,6 +127,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="alert alert-warning alert-dismissible cookie-banner" role="alert">
+        <div style="display: none;" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></div>
+        We use cookies to improve your experience. Please read our <a href="http://www.google.com/intl/en/policies/privacy/partners/">cookie policy</a>        for more information about how we use cookies.
     </div>
     <div class="container">
         <center>
@@ -114,7 +151,9 @@
             <noscript><img alt="stat4u" src="http://stat.4u.pl/cgi-bin/s.cgi?i=elegba&amp;r=ns" width="1" height="1"></noscript>
             <!-- stat.4u.pl KoNiEc -->
         </center>
+
     </div>
+
 </body>
 </html>
 
