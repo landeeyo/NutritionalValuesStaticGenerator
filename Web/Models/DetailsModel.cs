@@ -16,5 +16,12 @@ namespace Web.Models
         public double? Sugar { get; set; }
 
         public double? Fat { get; set; }
+
+        public string NormalizedName { get { return NormalizeFilename(Name); } }
+
+        private static string NormalizeFilename(string fileName)
+        {
+            return fileName.Replace("\\", "_").Replace("/", "_").Replace(",", "_");
+        }
     }
 }

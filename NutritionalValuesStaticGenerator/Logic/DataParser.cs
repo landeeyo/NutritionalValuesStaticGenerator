@@ -7,7 +7,7 @@ namespace NutritionalValuesStaticGenerator.Logic
 {
     public class DataParser
     {
-        private List<NutritionalDataItem> Items;
+        public List<NutritionalDataItem> Items;
 
         public DataParser(string path)
         {

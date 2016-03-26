@@ -1,24 +1,9 @@
-﻿@*<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    @RenderBody()
+﻿@using Web.Models
+@model ListModel
 
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
-</body>
-</html>*@
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <title>www.nuritionalvalues.cf - nutritional data, nutritional values, calories, carbohydrates, fat</title>
     <meta charset="UTF-8">
     <meta content="nutritional data, nutritional values, calories, carbohydrates, fat" name="Description">
@@ -34,34 +19,9 @@
     <meta name="revisit-after" content="20 Days">
     <meta name="google-site-verification" content="7NfzK_5w2PAx45zyxjOVIMf0D7TnnTvHDLQoo4fDfoI" />
 
-    @*<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/angular-translate/angular-translate.js"></script>
-<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
-<script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
-<script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
-<script src="bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
-<script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
-<script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
-<script src="bower_components/angular-linq/angular-linq.min.js"></script>
-<script src="bower_components/basic-js-cookie-banner/basic-js-cookie-banner.js"></script>*@
-
-    @*<script type="text/javascript" src="scripts/app.js"></script>
-<script type="text/javascript" src="scripts/filters/calitalize.js"></script>
-<script type="text/javascript" src="scripts/filters/grams.js"></script>
-<script type="text/javascript" src="scripts/services/dataProvider.js"></script>
-<script type="text/javascript" src="scripts/controllers/mainCtrl.js"></script>
-<script type="text/javascript" src="scripts/controllers/listCtrl.js"></script>
-<script type="text/javascript" src="scripts/controllers/detailsCtrl.js"></script>*@
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>    
 </head>
 
 <body ng-controller="mainCtrl">
@@ -88,7 +48,41 @@
             </header>
 
             <div id="main">
-                <@RenderBody()
+                <div class="col-md-2">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Left -->
+                    <ins class="adsbygoogle" style="display: block" data-ad-client="ca-pub-1267228462498826" data-ad-slot="2971427998" data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <td>Name</td>
+                            <td>Kcal</td>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Items)
+                            {
+                                <tr>
+                                    <td><a href="@string.Format("details_{0}.html", item.NormalizedName)">@item.Name</a></td>
+                                    <td>@item.Calories</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-2">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Right -->
+                    <ins class="adsbygoogle" style="display: block" data-ad-client="ca-pub-1267228462498826" data-ad-slot="7401627592" data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
             </div>
         </div>
     </div>
@@ -113,5 +107,9 @@
         </center>
     </div>
 </body>
-
 </html>
+
+
+
+
+

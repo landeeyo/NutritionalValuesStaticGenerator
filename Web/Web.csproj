@@ -138,10 +138,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DetailsModel.cs" />
-    <Compile Include="Models\Logic\DataParser.cs" />
-    <Compile Include="Models\Logic\DetailsGenerator.cs" />
-    <Compile Include="Models\Logic\IndexGenerator.cs" />
-    <Compile Include="Models\Logic\SiteGenerator.cs" />
+    <Compile Include="Models\ListModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +231,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Details.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Index.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
