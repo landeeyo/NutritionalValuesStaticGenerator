@@ -46,12 +46,18 @@
     </None>
     <Compile Include="Data\NutritionalDataItem.cs" />
     <Compile Include="Logic\DataParser.cs" />
+    <Compile Include="Logic\IndexGenerator.cs" />
     <Compile Include="Logic\SiteGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\css\bootstrap.min.css" />
+    <Content Include="Data\Index.html" />
+    <Content Include="Data\js\bootstrap.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
